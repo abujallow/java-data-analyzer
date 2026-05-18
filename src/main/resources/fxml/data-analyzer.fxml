@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns:fx="http://javafx.com/fxml"
+       xmlns="http://javafx.com/javafx"
+       fx:controller="controllers.DataAnalyzerController"
+       width="800"
+       height="600">
+
+    <GridPane alignment="CENTER" hgap="15" vgap="15">
+
+        <padding>
+            <Insets topRightBottomLeft="15"/>
+        </padding>
+
+        <fx:define>
+            <Font fx:id="mediumFont" size="20"/>
+            <Font fx:id="largeFont" size="32"/>
+        </fx:define>
+
+        <Button text="Select File"
+                font="$largeFont"
+                GridPane.rowIndex="1"
+                GridPane.columnIndex="0"
+                GridPane.halignment="CENTER"
+                onAction="#handleSelectFile"/>
+
+        <Label fx:id="statsArea"
+               text="Stats"
+               font="$mediumFont"
+               prefHeight="300"
+               prefWidth="600"
+               alignment="CENTER"
+               GridPane.rowIndex="2"
+               GridPane.columnIndex="0"
+               GridPane.halignment="CENTER"
+               style="-fx-border-color: gray;
+                      -fx-border-width: 1;
+                      -fx-padding: 10;
+                      -fx-background-color: white;" />
+
+        <Button text="Export Stats to .txt"
+                font="$largeFont"
+                GridPane.rowIndex="3"
+                GridPane.columnIndex="0"
+                GridPane.halignment="CENTER"
+                onAction="#handleExport"/>
+
+        <Button text="Help"
+                font="$largeFont"
+                GridPane.rowIndex="4"
+                GridPane.columnIndex="0"
+                GridPane.halignment="CENTER"
+                onAction="#handleHelp"/>
+
+    </GridPane>
+</Scene>
